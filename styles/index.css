@@ -1,4 +1,5 @@
 body {}
+/* ===============================헤더 */
 header {
     padding: 20px;
     background-color: #181818;
@@ -10,7 +11,9 @@ header .top_bar {
 }
 header .top_bar .left {}
 header .top_bar .left a {}
-header .top_bar .left a img {}
+header .top_bar .left a img {
+    width: 30px; height: 30px;
+}
 header .top_bar h1 {}
 header .top_bar h1 a {}
 header .top_bar h1 a img {
@@ -29,7 +32,8 @@ header .top_bar .right a:last-child {
 header .top_bar .right a img {}
 header nav {
     margin-top: 20px;
-    
+    position: relative;
+    z-index: 100; 
 }
 header nav .gnb {
     display: flex;
@@ -37,6 +41,7 @@ header nav .gnb {
 }
 header nav .gnb .title {
     padding-right: 40px;
+    position: relative;
 }
 header nav .gnb .title:last-child {
     padding-right: 0px;
@@ -46,8 +51,9 @@ header nav .gnb .title a {
     font-size: 0.875rem;
 }
 header nav .gnb .sub {
-    /* display: none; */
+    display: none;
     position: absolute;
+    left: 0;
     background-color: #fff;
     min-width: 160px;
     z-index: 1;
@@ -58,4 +64,82 @@ header nav .gnb .sub a {
     padding: 12px 16px;
     display: block;
 }
-main {}
+/* =================================메인비디오 */
+.video_wrap {
+    width: 100%;
+    overflow: hidden;
+}
+.video_wrap video {
+    position: relative;
+    top: -70px;
+    width: 100%;
+    z-index: -1;
+}
+.video_text {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+.video_text h2 {
+    margin-bottom: 25px;
+    letter-spacing: 3px;
+}
+.video_text .btn {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+    border: 1px solid #fff;
+    display: block;
+    padding: 14px 55px;
+}
+/* ===============================메인1.카드 */
+main {
+    margin-top: -80px;
+    background: #181818;
+}
+main .card_wrap {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+}
+main .card_wrap > p {
+    color: #fff;
+    text-align: center;
+    line-height: 1.7;
+    font-size: 1.375rem;
+    font-weight: 500;
+}
+main .card_wrap .card {
+    background-color: #7F7F7F;
+    color: #fff;
+    border-radius: 10px;
+    width: 295.70px;
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-left: 30px;
+}
+main .card_wrap .card .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+main .card_wrap .card p {
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+main .card_wrap .card a {
+    color: #fff;
+    font-size: 0.875rem;
+}
+main .card_wrap .card .icon img {
+    width: 48px;
+    height: 48px;
+}
