@@ -8,19 +8,15 @@ header .top_bar {
     justify-content: space-between;
     align-items: center;
 }
-header .top_bar .left {
-    width: 188px;
-}
+header .top_bar .left {}
 header .top_bar .left a {}
 header .top_bar .left a img {}
-header .top_bar .center {}
-header .top_bar .center h1 {}
-header .top_bar .center h1 a {}
-header .top_bar .center h1 a img {
+header .top_bar h1 {}
+header .top_bar h1 a {}
+header .top_bar h1 a img {
     width: 186px; height: 40px;
 }
 header .top_bar .right {
-    width: 188px;
     display: flex;
     justify-content: right;
 }
@@ -33,16 +29,33 @@ header .top_bar .right a:last-child {
 header .top_bar .right a img {}
 header nav {
     margin-top: 20px;
+    
+}
+header nav .gnb {
     display: flex;
     justify-content: center;
 }
-header nav li {
+header nav .gnb .title {
     padding-right: 40px;
 }
-header nav li:last-child {
+header nav .gnb .title:last-child {
     padding-right: 0px;
 }
-header nav li a {
+header nav .gnb .title a {
     color: #fff;
     font-size: 0.875rem;
 }
+header nav .gnb .sub {
+    /* display: none; */
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    z-index: 1;
+    margin-top: 20px;
+}
+header nav .gnb .sub a {
+    color: #181818;
+    padding: 12px 16px;
+    display: block;
+}
+main {}
