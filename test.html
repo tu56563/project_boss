@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        main {}
+        .big_view {
+            width: 600px; height: 500px;
+            margin: 30px auto; background: lightblue;
+            overflow: hidden;
+        }
+        .big_view img {width: 100%;}
+        .small_slide {
+            width: 700px; background: #eee;
+            padding: 20px;
+        }
+        .small_slide .swiper-wrapper {}
+        .small_slide .swiper-wrapper .swiper-slide {
+            border: 1px solid #000; height: 50px; overflow: hidden;
+        }
+        .small_slide .swiper-wrapper .swiper-slide img {width: 100%;}
+    </style>
+</head>
+<body>
+    <main>
+        <div class="big_view"><img src="" alt=""></div>
+        <div class="swiper small_slide">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://i.pinimg.com/564x/c8/e8/99/c8e899dc32d4d4ef3b6e92dd36b9256a.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="https://i.pinimg.com/564x/32/e6/ed/32e6ed61ecdba7bfa746c2ccb5298ad4.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="https://i.pinimg.com/564x/90/eb/80/90eb80ae7952f2ff419523d0c1d41d7f.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="https://i.pinimg.com/564x/8c/44/30/8c4430cb027bc8104c0388cea7630d69.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="https://i.pinimg.com/564x/8d/a0/84/8da084ada0e47436187145295c6699e1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="https://i.pinimg.com/564x/16/f1/63/16f16332b03ef16e23eadee528dc268b.jpg" alt=""></div>
+            </div>
+        </div>
+    </main>
+    <script>
+        const small_s = new Swiper('.small_slide',{
+            autoplay:{delay:1000},
+            loop:true,
+            slidesPerView:5,
+            spaceBetween:10,
+        })
+
+        //swiper-slide 6개 개별 클릭 시
+        //img 경로를 확인하고 
+        //해당 경로를 big_view의 img 경로에 대입하기
+        const small_slide = document.querySelectorAll('.small_slide .swiper-slide')
+        const big_view = document.querySelector('.big_view')
+        //사용js : for, addEventListener, children, src
+        for(let i of small_slide){
+            i.addEventListener('click',()=>{
+                big_view.children[0].src = i.children[0].src
+            })
+        }
+    </script>
+</body>
+</html>
