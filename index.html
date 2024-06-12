@@ -3,11 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BOSE 온라인</title>
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/index.css">
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        /* pagination css */
+        #visual_slide .swiper-pagination {
+            bottom: 32px; /* 페이지네이션 도트의 위치를 위로 올림 */
+            position: relative;
+            top: auto;
+            bottom: 30px; /* 원하는 위치로 조정 */
+        }
+        #visual_slide .swiper-pagination .swiper-pagination-bullet {
+            opacity: 0.2;/* 기본값0.2 */    
+            background: #fff;
+            width: 8px; height: 8px;
+            margin: 0 5px;    /* 도트 사이의 간격 설정 */
+        }
+        #visual_slide .swiper-pagination .swiper-pagination-bullet-active {
+            background: #fff; /* 활성화된 도트 배경 색상 */
+            opacity: 1;          /* 활성화된 도트 불투명도 */
+        }
+        #visual_slide .swiper-button-next,
+        #visual_slide .swiper-button-prev {
+            display: none;
+        }
+    </style>
 </head>
 <body>
+    <!-- ===============================헤더 -->
     <header>
         <div class="top_bar">
             <div class="left"><a href="#"><img src="./images/quill_hamburger.png" alt=""></a></div>
@@ -81,6 +111,7 @@
             </ul>
         </nav>
     </header>
+    <!-- =====================================비디오 -->
     <div class="video_wrap">
         <video src="./video/Bose_video.mp4" autoplay muted loop></video>
         <div class="video_text">
@@ -88,7 +119,9 @@
             <a href="#" class="btn">자세히보기 ></a>
         </div>
     </div>
+    <!-- =========================================메인 -->
     <main>
+    <!-- ================================= 메인1 카드 -->
         <div class="card_wrap">
             <p>왜 BOSE 온라인 스토어에서<br>구매해야할까요?</p>
             <div class="card">
@@ -97,7 +130,7 @@
                     <a href="#">정품 안내 확인하기 ></a>
                 </div>
                 <div class="icon">
-                    <img src="images/quill_hamburger.png" alt="Certificate Icon">
+                    <img src="images/ph_medal.svg" alt="Certificate Icon">
                 </div>
             </div>
             <div class="card">
@@ -106,7 +139,7 @@
                     <a href="#">쇼핑 바로가기 ></a>
                 </div>
                 <div class="icon">
-                    <img src="images/quill_hamburger.png" alt="Certificate Icon">
+                    <img src="images/mdi_hand-coin-outline.svg" alt="Certificate Icon">
                 </div>
             </div>
             <div class="card">
@@ -115,7 +148,196 @@
                     <a href="#">회원가입하고 쿠폰 받기 ></a>
                 </div>
                 <div class="icon">
-                    <img src="images/quill_hamburger.png" alt="Certificate Icon">
+                    <img src="images/mdi_coupon-outline.svg" alt="Certificate Icon">
+                </div>
+            </div>
+        </div>
+        <!-- =============================메인2 스와이퍼 -->
+        <div class="swiper" id="visual_slide"><!-- position:relative 기본설정 -->
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/swipe001.png" alt="">
+                    <div class="slide-text text1">
+                        <h2>완전히 새로운 헤드폰<br>그리고<br>경이로운 청취 경험.<h2>
+                        <h3>QUIETCOMFORT® ULTRA HEADPHONES</h3>
+                        <a href="#" class="btn">자세히보기 ></a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/swipe002.jpg" alt="">
+                    <div class="slide-text text2">
+                        <h2>지금껏 경험해<br>보지못한 사운드.<h2>
+                        <h3>SMART ULTRA SOUNDBAR</h3>
+                        <a href="#" class="btn">자세히보기 ></a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/swipe003.jpg" alt="">
+                    <div class="slide-text text3">
+                        <h2>진짜보다<br>더 진짜같은 사운드.<h2>
+                        <h3>QUIETCOMFORT® ULTRA EARBUDS</h3>
+                        <a href="#" class="btn">자세히보기 ></a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/swipe004.png" alt="">
+                    <div class="slide-text text4">
+                        <h2>비트를 넘어<br>템포를 장악하다.<h2>
+                        <h3>QUIETCOMFORT® HEADPHONES</h3>
+                        <a href="#" class="btn">자세히보기 ></a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/swipe005.png" alt="">
+                    <div class="slide-text text5">
+                        <h2>때와 장소를 가리지 않는<br>깊고 풍부한 사운드.<h2>
+                        <h3>SOUNDLINK FLEX</h3>
+                        <a href="#" class="btn">자세히보기 ></a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"><!-- 비워두기 --></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <!-- 슬라이드의 부가속성(페이지번호, 이전 다음 버튼 등) -->
+            <script>
+                const visual_s = new Swiper('#visual_slide', {
+                autoplay: { delay: 5000 },
+                loop: true,
+                speed: 1000,
+                pagination: {
+                    el: '#visual_slide .swiper-pagination',
+                    type: 'bullets',
+                    clickable: true, // 페이지네이션 도트를 클릭할 수 있게 설정
+                },
+            });
+            </script>
+        <div class="box_container">
+            <a href="#" class="box">
+                <div class="box_text">
+                    <p>Headphone</p>
+                    <h2>헤드폰</h2>
+                </div>
+            </a>
+            <a href="#" class="box">
+                <div class="box_text">
+                    <p>Earbuds</p>
+                    <h2>이어폰</h2>
+                </div>
+            </a>
+            <a href="#" class="box">
+                <div class="box_text">
+                    <p>Soundbar</p>
+                    <h2>사운드바</h2>
+                </div>
+            </a>
+            <a href="#" class="box">
+                <div class="box_text">
+                    <p>Speaker</p>
+                    <h2>스피커</h2>
+                </div>
+            </a>
+        </div>
+        <div class="main_item">
+            <h2>신제품</h2>
+            <div class="item_list">
+                <div class="item_wrap">
+                    <div class="item_img">
+                        <a href="#">
+                            <img src="./images/item001.jpg" alt="" class="img_a">
+                            <img src="./images/item001_white.jpg" alt="" class="img_b">
+                        </a>
+                    </div>
+                    <div class="item_contents">
+                        <a href="#" class="c_link">
+                            <div class="color_box box1"></div>
+                            <div class="color_box box2"></div>
+                            <h2>[고음질 동글 증정] 보스 울트라 오픈 이어버드</h2>
+                            <p class="price">359,000원</p>
+                            <div class="label">
+                                <p class="new">NEW</p>
+                                <p class="best">BEST</p>
+                            </div>
+                            <div class="review">
+                                <p><img src="./images/openmoji_left-speech-bubble.svg" alt="">21</p>
+                                <p><img src="./images/tdesign_cart.svg" alt=""></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="item_wrap">
+                    <div class="item_img">
+                        <a href="#">
+                            <img src="./images/item002.jpg" alt="" class="img_a">
+                            <img src="./images/item002_white.jpg" alt="" class="img_b">
+                        </a>
+                    </div>
+                    <div class="item_contents">
+                        <a href="#" class="c_link">
+                            <div class="color_box box1"></div>
+                            <div class="color_box box2"></div>
+                            <h2>[BOSE] 보스 스마트 울트라 사운드바</h2>
+                            <p class="price">1,199,000원</p>
+                            <div class="label">
+                                <p class="new">NEW</p>
+                            </div>
+                            <div class="review">
+                                <p><img src="./images/openmoji_left-speech-bubble.svg" alt="">1</p>
+                                <p><img src="./images/tdesign_cart.svg" alt=""></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="item_wrap">
+                    <div class="item_img">
+                        <a href="#">
+                            <img src="./images/item003.jpg" alt="" class="img_a">
+                            <img src="./images/item003_white.jpg" alt="" class="img_b">
+                        </a>
+                    </div>
+                    <div class="item_contents">
+                        <a href="#" class="c_link">
+                            <div class="color_box box1"></div>
+                            <div class="color_box box2"></div>
+                            <div class="color_box box3"></div>
+                            <div class="color_box box4"></div>
+                            <h2>[모남희 키링 증정] 보스 QC 헤드폰</h2>
+                            <p class="del_price"><del>389,000원</del></p>
+                            <p class="price"><span>10% </span>349,000원</p>
+                            <div class="label">
+                                <p class="sale">SALE</p>
+                            </div>
+                            <div class="review">
+                                <p><img src="./images/openmoji_left-speech-bubble.svg" alt="">7</p>
+                                <p><img src="./images/tdesign_cart.svg" alt=""></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="item_wrap">
+                    <div class="item_img">
+                        <a href="#">
+                            <img src="./images/item004.jpg" alt="" class="img_a">
+                            <img src="./images/item004_white.jpg" alt="" class="img_b">
+                        </a>
+                    </div>
+                    <div class="item_contents">
+                        <a href="#" class="c_link">
+                            <div class="color_box box1"></div>
+                            <div class="color_box box2"></div>
+                            <div class="color_box box3"></div>
+                            <h2>[고음질 동글 증정] 보스 QC 울트라 이어버드</h2>
+                            <p class="price">359,000원</p>
+                            <div class="label">
+                                <p class="new">NEW</p>
+                                <p class="best">BEST</p>
+                            </div>
+                            <div class="review">
+                                <p><img src="./images/openmoji_left-speech-bubble.svg" alt="">6</p>
+                                <p><img src="./images/tdesign_cart.svg" alt=""></p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

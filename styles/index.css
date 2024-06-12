@@ -1,4 +1,12 @@
 body {}
+*.btn {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 14px 55px;
+    display: inline-block;
+}
 /* ===============================헤더 */
 header {
     padding: 20px;
@@ -71,7 +79,7 @@ header nav .gnb .sub a {
 }
 .video_wrap video {
     position: relative;
-    top: -70px;
+    top: -75px;
     width: 100%;
     z-index: -1;
 }
@@ -88,23 +96,24 @@ header nav .gnb .sub a {
     letter-spacing: 3px;
 }
 .video_text .btn {
-    font-size: 18px;
+    /* font-size: 18px;
     line-height: 1.5;
     color: #fff;
     border: 1px solid #fff;
-    display: block;
-    padding: 14px 55px;
+    display: inline-block;
+    padding: 14px 55px; */
+    letter-spacing: 2px;
 }
 /* ===============================메인1.카드 */
 main {
     margin-top: -80px;
-    background: #181818;
 }
 main .card_wrap {
+    background: #181818;
     height: 200px;
     display: flex;
     align-items: center;
-    margin-left: 200px;
+    justify-content: center;
 }
 main .card_wrap > p {
     color: #fff;
@@ -143,3 +152,183 @@ main .card_wrap .card .icon img {
     width: 48px;
     height: 48px;
 }
+/* ========================메인2 스와이퍼 */
+main #visual_slide .swiper-wrapper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+main #visual_slide .swiper-wrapper .swiper-slide img {
+    width: 100%; height: 750px;
+    object-fit: cover;
+}
+main #visual_slide .swiper-wrapper .swiper-slide .slide-text {
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    left: 450px;
+}
+main #visual_slide .swiper-wrapper .swiper-slide .text4 {
+    left: auto;
+    right: 450px;
+}
+main #visual_slide .swiper-wrapper .swiper-slide .slide-text h2 {
+    font-size: 2.625rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+main #visual_slide .swiper-wrapper .swiper-slide .slide-text h3 {
+    font-size: 1.25rem;
+    padding: 20px 0;
+    letter-spacing: 2px;
+}
+main #visual_slide .swiper-wrapper .swiper-slide .slide-text a {}
+/* =================================메인3 아이템박스 */
+main .box_container {
+    padding: 120px 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+main .box_container .box {
+    display: flex;
+    flex-flow: column nowrap;
+    font-size: 1.125rem;
+    width: 297.50px; height: 173px;
+    border: 1px solid #e5e7eb;
+    text-align: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-right: 20px;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+main .box_container .box:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+main .box_container .box:hover {
+}
+main .box_container .box:last-child {
+    margin-right: 0;
+}
+main .box_container .box .box_text {}
+main .box_container .box .box_text > p {
+    padding-bottom: 10px;
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+    color: #999;
+}
+main .box_container .box .box_text > h2 {
+    color: #181818;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: -1px;
+}
+/* ============================메인4 아이템리스트 */
+main .main_item {}
+main .main_item > h2 {
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 700;
+    padding-bottom: 38px;
+}
+main .main_item .item_list {
+    display: flex;
+    justify-content: center;
+}
+main .main_item .item_list .item_wrap {
+    margin-right: 30px;
+}
+main .main_item .item_list .item_wrap:last-child {
+    margin-right: 0;
+}
+main .main_item .item_list .item_wrap .item_img {
+    width: 298px;
+    position: relative;
+}
+main .main_item .item_list .item_wrap .item_img a .img_b {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+main .main_item .item_list .item_wrap .item_img:hover .img_b {
+    display: block;
+}
+main .main_item .item_list .item_wrap .item_img a {}
+main .main_item .item_list .item_wrap .item_img a img {
+    margin-bottom: 20px;
+    width: 298px; height: 298px;
+}
+main .main_item .item_list .item_wrap .item_contents {}
+main .main_item .item_list .item_wrap .item_contents .c_link {}
+main .main_item .item_list .item_wrap .item_contents .c_link .box1 {
+    width: 9px; height: 9px;
+    border: 1px solid #e5e7eb;
+    display: inline-block;
+    background: #181818;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link .box2 {
+    width: 9px; height: 9px;
+    border: 1px solid #e5e7eb;
+    display: inline-block;
+    background: #fff;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link .box3 {
+    width: 9px; height: 9px;
+    border: 1px solid #e5e7eb;
+    display: inline-block;
+    background: #afe2f4;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link .box4 {
+    width: 9px; height: 9px;
+    border: 1px solid #e5e7eb;
+    display: inline-block;
+    background: #104018;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link > h2 {
+    font-size: 0.938rem;
+    padding-top: 10px;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link .price {
+    padding: 10px 0;
+    font-weight: 700;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link .price span {
+    font-weight: 700;
+    color: #f25356;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link .del_price {
+    font-size: 0.75rem;
+    color: #7F7F7F;
+    padding-top: 5px;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link .label {
+    display: flex;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link > .label p {
+    width: 55px;
+    line-height: 23px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    color: #fff;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link .new {
+    background: #181818;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link .best {
+    background: #5BA1D5;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link .sale {
+    background: #D70902;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link .review {
+    display: flex;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link .review p {
+    font-size: 0.875rem;
+    margin-right: 5px;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link .review p img {}
