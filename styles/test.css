@@ -1,4 +1,6 @@
-body {}
+body {
+    overflow-x: hidden;
+}
 *.btn {
     font-size: 1.125rem;
     line-height: 1.5;
@@ -65,7 +67,7 @@ header nav .gnb .title a {
     font-size: 0.875rem;
 }
 header nav .gnb .sub {
-    display: none;
+    display: none; /* 서브메뉴숨김 */
     position: absolute;
     left: 0;
     background-color: #fff;
@@ -77,6 +79,39 @@ header nav .gnb .sub a {
     color: #181818;
     padding: 12px 16px;
     display: block;
+}
+/* ========================메인팝업 */
+main .popup {
+    position: fixed;
+    bottom: 25px; 
+    right: 20px;
+    z-index: 1000;
+}
+
+main .popup a {
+    display: block;
+    margin-bottom: 5px;
+}
+main .popup .arrow {
+    margin-left: 55px;
+}
+main .popup a img {
+    width: 40px; height: 40px;
+}
+main .popup .talk_link {}
+main .popup .talk_link .talk_banner {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 15px;
+    border-radius: 20px;
+}
+main .popup .talk_link .talk_banner img {
+    width: 18px; height: 18px;
+}
+main .popup .talk_link .talk_banner p {
+    font-size: 0.813rem;
+    color: #333;
 }
 /* =================================메인비디오 */
 .video_wrap {
@@ -231,3 +266,315 @@ main .box_container .box .box_text > h2 {
     letter-spacing: -1px;
 }
 /* ============================메인4 아이템리스트 */
+main .main_item {}
+main .main_item > h2 {
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 700;
+    padding-bottom: 38px;
+}
+main .main_item .item_list {
+    display: flex;
+    justify-content: center;
+}
+main .main_item .item_list .item_wrap {
+    margin-right: 30px;
+}
+main .main_item .item_list .item_wrap:last-child {
+    margin-right: 0;
+}
+main .main_item .item_list .item_wrap .item_img {
+    width: 298px;
+    position: relative;
+}
+main .main_item .item_list .item_wrap .item_img a .img_b {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+main .main_item .item_list .item_wrap .item_img:hover .img_b {
+    display: block;
+}
+main .main_item .item_list .item_wrap .item_img a {}
+main .main_item .item_list .item_wrap .item_img a img {
+    margin-bottom: 20px;
+    width: 298px; height: 298px;
+}
+main .main_item .item_list .item_wrap .item_contents {}
+main .main_item .item_list .item_wrap .item_contents .c_link {}
+main .main_item .item_list .item_wrap .item_contents .c_link .box1 {
+    width: 9px; height: 9px;
+    border: 1px solid #e5e7eb;
+    display: inline-block;
+    background: #181818;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link .box2 {
+    width: 9px; height: 9px;
+    border: 1px solid #e5e7eb;
+    display: inline-block;
+    background: #fff;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link .box3 {
+    width: 9px; height: 9px;
+    border: 1px solid #e5e7eb;
+    display: inline-block;
+    background: #afe2f4;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link .box4 {
+    width: 9px; height: 9px;
+    border: 1px solid #e5e7eb;
+    display: inline-block;
+    background: #104018;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link > h2 {
+    font-size: 0.938rem;
+    padding-top: 10px;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link .price {
+    padding: 10px 0;
+    font-weight: 700;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link .price span {
+    font-weight: 700;
+    color: #f25356;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link .del_price {
+    font-size: 0.75rem;
+    color: #7F7F7F;
+    padding-top: 5px;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link .label {
+    display: flex;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link > .label p {
+    width: 55px;
+    line-height: 23px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    color: #fff;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link .new {
+    background: #181818;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link .best {
+    background: #5BA1D5;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link .sale {
+    background: #D70902;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link .review {
+    display: flex;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link .review p {
+    font-size: 0.875rem;
+    margin-right: 5px;
+}
+main .main_item .item_list .item_wrap .item_contents .c_link .review p img {}
+/* =========================메인5 빅뷰 */
+main .big_view {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+main .big_view p {}
+main .big_view p img {
+    width: 1920px;
+    height: 882px;
+    object-fit: cover;
+}
+main .big_view .view_text {
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    right: 450px;
+}
+main .big_view .view_text h2 {
+    font-size: 0.875rem;
+    letter-spacing: 2px;
+}
+main .big_view .view_text h3 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.5;
+    padding: 20px 0 30px;
+}
+main .big_view .view_text .btn {}
+/* =====================메인6 보스스토리 */
+main .brand_story {}
+main .brand_story > h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin: 40px 0;
+    text-align: center;
+}
+main .brand_story .story_container {
+    display: flex;
+    justify-content: center;
+}
+main .brand_story .story_card {
+    width: 300px; height: 470px;
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-right: 32px;
+}
+main .brand_story .story_card:last-child {
+    margin-right: 0;
+}
+main .brand_story .story_card img {
+    width: 100%;
+    height: 298px;
+    object-fit: cover;
+}
+main .brand_story .story_card .card_content {
+    padding: 20px;
+}
+main .brand_story .story_card .card_content h3 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 10px;
+}
+main .brand_story .story_card .card_content p {
+    color:#999;
+    font-size: 0.75rem;
+    line-height: 1.2;
+    margin: 0 0 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+main .brand_story .story_card .card_content .date {
+    font-size: 0.75rem;
+    color: #999;
+}
+/* =========================메인7 광고 */
+main .adv_container {
+    margin: 70px 0 80px;
+}
+main .adv_container .adv_banner {
+    position: relative;
+}
+main .adv_container .adv_banner a {}
+main .adv_container .adv_banner a img {
+    width: 1295px;
+    display: block;
+    margin: 0 auto;
+}
+main .adv_container .adv_banner .banner_text {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+main .adv_container .adv_banner .banner_text h2 {
+    color: #ff781f;
+    font-size: 1.875rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+main .adv_container .adv_banner .banner_text p {
+    color: #ff781f;
+    padding: 10px 0 20px;
+}
+main .adv_container .adv_banner .banner_text > .btn {
+    background: #fff;
+    color: #181818;
+}
+main .adv_container .adv_banner .banner_text > .btn:hover {
+    background: #181818;
+    color: #fff;
+}
+/* ====================풋터 */
+footer {
+    background: #181818;
+}
+footer section {
+    width: 1290px;
+    margin: 0 auto;
+    position: relative;
+}
+footer section .line {
+    border: 1px solid #fff;
+    position: absolute;
+    left: 0%;
+    top: 40%;
+    width: 1295px;
+}
+footer section .ft_top {
+    display: flex;
+    justify-content: space-around;
+}
+footer section .ft_top .ft_menu {
+    padding-top: 50px;
+    display: flex;
+    flex-flow: column wrap;
+    color: #fff;
+}
+footer section .ft_top .ft_menu h2 {
+    padding-bottom: 20px;
+}
+footer section .ft_top .ft_menu a {
+    color: #fff;
+    margin-top: 20px;
+}
+footer .ft_icon {
+    background: #282828;
+}
+footer .ft_icon > section {
+    width: 1295px;
+    padding: 18px 0;
+    margin-top: 47px;
+    display: flex;
+    align-items: center;
+}
+footer .ft_icon > section a {
+    margin-right: 25px;
+}
+footer .ft_icon > section a img {
+}
+footer .ft_btm {
+    background: #181818;
+}
+footer .ft_btm > section {
+    width: 1295px;
+    margin: 0 auto;
+}
+footer section .ft_btm {
+    display: flex;
+    color: #999;
+    padding: 100px 0;
+}
+footer section .ft_btm .ft_logo {
+    width: 320px;
+}
+footer section .ft_btm .ft_logo img {
+    width: 200px;
+    padding-top: 20px;
+}
+footer section .ft_btm .ft_other {
+    width: 810px;
+}
+footer section .ft_btm .ft_other p {
+    padding-bottom: 10px;
+    font-size: 0.813rem;
+}
+footer section .ft_btm .ft_link {}
+footer section .ft_btm .ft_link a {
+    color: #999;
+    font-size: 0.75rem;
+}
+footer section .line_2 {
+    border: 1px solid #999;
+    position: absolute;
+    left: 24%;
+    top: 25%;
+    width: 987.5px;
+}
