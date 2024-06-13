@@ -513,7 +513,7 @@ footer section .line {
     position: absolute;
     left: 0%;
     top: 40%;
-    width: 1295px;
+    width: 1290px;
 }
 footer section .ft_top {
     display: flex;
@@ -583,5 +583,5 @@ footer section .line_2 {
     position: absolute;
     left: 24%;
     top: 25%;
-    width: 987.5px;
+    width: 980px;
 }
