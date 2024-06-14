@@ -421,7 +421,7 @@ main .brand_story .story_container {
     justify-content: center;
 }
 main .brand_story .story_card {
-    width: 300px; height: 470px;
+    width: 300px;
     border: 1px solid #e5e7eb;
     overflow: hidden;
     display: flex;
@@ -437,7 +437,7 @@ main .brand_story .story_card img {
     object-fit: cover;
 }
 main .brand_story .story_card .card_content {
-    padding: 20px;
+    padding: 20px 20px 0;
 }
 main .brand_story .story_card .card_content h3 {
     font-weight: 700;
@@ -455,9 +455,13 @@ main .brand_story .story_card .card_content p {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
-main .brand_story .story_card .card_content .date {
+main .brand_story .story_card .summary {
     font-size: 0.75rem;
     color: #999;
+    padding: 0 20px 20px;
+}
+main .brand_story .story_card .last {
+    padding: 20px;
 }
 /* =========================메인7 광고 */
 main .adv_container {
