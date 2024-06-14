@@ -284,9 +284,7 @@ main .main_item .item_list {
     display: flex;
     justify-content: center;
 }
-main .main_item .item_list .item_wrap {
-    margin-right: 30px;
-}
+main .main_item .item_list .item_wrap {}
 main .main_item .item_list .item_wrap:last-child {
     margin-right: 0;
 }
