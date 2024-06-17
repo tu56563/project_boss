@@ -47,27 +47,111 @@ header .top_bar .right a:last-child {
     padding-right: 0;
 }
 header .top_bar .right a img {}
-header nav {
+header .fix_bg, header .left_menu {
+    display: none;
+}
+header .fix_bg.active, header .left_menu.active {
+    display: block;
+}
+header .fix_bg {
+    display: none;
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    transition: opacity 0.5s ease;
+}
+header .left_menu {
+    display: none;
+    background: #181818;
+    position: fixed;
+    left: -300px; /* 시작 위치를 화면 밖으로 설정 */
+    top: 0;
+    width: 300px;
+    height: 100%;
+    z-index: 999;
+    transition: transform 0.5s ease;
+}
+header .left_menu.active {
+    /* transform: translateX(300px); */ /* 화면 안으로 이동 */
+    display: block; /* 메뉴가 보이도록 설정 */
+}
+header .left_menu .close {
+    text-align: right;
+    display: block;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+}
+header .left_menu .close::before,
+header .left_menu .close::after {
+    position: absolute;
+    right: 24px;
+    top: 20px;
+    content: ' ';
+    height: 25px;
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: background-color 0.3s ease;
+}
+header .left_menu .close:hover::before,
+header .left_menu .close:hover::after {
+    background-color: rgba(255, 255, 255, 1);
+}
+header .left_menu .close:before {
+    transform: rotate(45deg);
+}
+header .left_menu .close:after {
+    transform: rotate(-45deg);
+}
+header .left_menu h1 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+header .left_menu h1 img {
+    width: 186px;
+    height: 40px;
+}
+header .left_menu > nav {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+header .left_menu nav > a {
+    padding: 10px 0;
+    letter-spacing: 1px;
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+header .left_menu nav > a:hover {
+    color: #fff;
+}
+header > nav {
     margin-top: 20px;
     position: relative;
     z-index: 100; 
 }
-header nav .gnb {
+header > nav .gnb {
     display: flex;
     justify-content: center;
 }
-header nav .gnb .title {
+header > nav .gnb .title {
     padding-right: 40px;
     position: relative;
 }
-header nav .gnb .title:last-child {
+header > nav .gnb .title:last-child {
     padding-right: 0px;
 }
-header nav .gnb .title a {
+header > nav .gnb .title a {
     color: #fff;
     font-size: 0.875rem;
 }
-header nav .gnb .sub {
+header > nav .gnb .sub {
     display: none;
     position: absolute;
     left: 0;
@@ -78,11 +162,11 @@ header nav .gnb .sub {
     opacity: 0;
     transition: opacity 0.5s ease;
 }
-header nav .gnb .sub.show {
+header > nav .gnb .sub.show {
     display: block;
     opacity: 1;
 }
-header nav .gnb .sub a {
+header > nav .gnb .sub a {
     color: #181818;
     padding: 12px 16px;
     display: block;
@@ -116,9 +200,12 @@ main .popup .talk_link .talk_banner {
 main .popup .talk_link .talk_banner img {
     width: 18px; height: 18px;
 }
-main .popup .talk_link .talk_banner p {
+main .popup .talk_link .talk_banner > p {
     font-size: 0.813rem;
     color: #333;
+    letter-spacing: 1px;
+    padding-left: 3px;
+    font-weight: 700;
 }
 /* =================================메인비디오 */
 .video_wrap {
@@ -371,10 +458,14 @@ main .main_item .item_list .item_wrap .item_contents .c_link .sale {
 }
 main .main_item .item_list .item_wrap .item_contents .c_link .review {
     display: flex;
+    align-items: center;
 }
 main .main_item .item_list .item_wrap .item_contents .c_link .review p {
     font-size: 0.875rem;
     margin-right: 5px;
+    color: #999;
+    display: flex;
+    align-items: center;
 }
 main .main_item .item_list .item_wrap .item_contents .c_link .review p img {}
 /* =========================메인5 빅뷰 */
