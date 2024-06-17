@@ -151,6 +151,9 @@ header > nav .gnb .title a {
     color: #fff;
     font-size: 0.875rem;
 }
+header > nav .gnb .title a:hover {
+    color: #999;
+}
 header > nav .gnb .sub {
     display: none;
     position: absolute;
