@@ -122,7 +122,7 @@ main .popup .talk_link .talk_banner p {
 }
 /* =================================메인비디오 */
 .video_wrap {
-    width: 100%;
+    width: 1920px;
     overflow: hidden;
 }
 .video_wrap video {
