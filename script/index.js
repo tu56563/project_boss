@@ -29,18 +29,21 @@
 const nav_title = document.querySelectorAll('nav .title');
 
 for(let i of nav_title){
+    // nab_title에 있는 요소들 반복문 실행
     /* console.log(i, nav_title) */
     const subMenu = i.querySelector('.sub');
     i.addEventListener('mouseover',function(){
         if(subMenu){
             /* console.log(subMenu) */
             subMenu.classList.add('show')
+            /* subMenu에 show 클래스 추가하여 활성화 */
         }
     })
     i.addEventListener('mouseout',function(){
         if(subMenu){
             /* console.log(subMenu) */
             subMenu.classList.remove('show')
+            /* subMenu에 show 클래스 제거하여 숨김 */
         }
     })
     
