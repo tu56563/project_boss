@@ -26,6 +26,7 @@
             body.style.overflow = ''; // 스크롤 활성화
         }, 500);
     });
+// =================================================
 const nav_title = document.querySelectorAll('nav .title');
 
 for(let i of nav_title){
@@ -48,3 +49,27 @@ for(let i of nav_title){
     })
     
 }
+// .detail_nav li a 액티브컬러
+const tabs = document.querySelectorAll('.detail_nav li a');
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', function(event) {
+        // a태그 페이지 이동 막기
+        event.preventDefault();
+        // 모든 탭의 active 클래스 제거
+        tabs.forEach(tab => tab.classList.remove('active'));
+        // 클릭한 탭에 active 클래스 추가
+        this.classList.add('active');
+    });
+});
+// .review_ranking li a 밑줄
+const ranking = document.querySelectorAll('.review_ranking li a');
+
+ranking.forEach(rank => {
+    rank.addEventListener('click', function(event) {
+        event.preventDefault();
+        ranking.forEach(rank => rank.classList.remove('underline'));
+        this.classList.add('underline');
+    })
+})
+
